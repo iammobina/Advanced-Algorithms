@@ -1,0 +1,11 @@
+C:\git\96522321\DS97981\A12\A12\bin\Debug\A12.exe.config
+C:\git\96522321\DS97981\A12\A12\bin\Debug\A12.exe
+C:\git\96522321\DS97981\A12\A12\bin\Debug\A12.pdb
+C:\git\96522321\DS97981\A12\A12\bin\Debug\TestCommon.dll
+C:\git\96522321\DS97981\A12\A12\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\git\96522321\DS97981\A12\A12\bin\Debug\TestCommon.pdb
+C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.csprojAssemblyReference.cache
+C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.csproj.CoreCompileInputs.cache
+C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.csproj.CopyComplete
+C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.exe
+C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.pdb
