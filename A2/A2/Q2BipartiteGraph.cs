@@ -61,7 +61,7 @@ namespace A2
             }
             foreach(var vertex in edges)
             {
-                Connection[vertex[0]].Add(vertex[1]);
+                Connection[vertex[0]].Add(new list<long> { vertex[1] , 5});
                 Connection[vertex[1]].Add(vertex[0]);
             }
             return Connection;
