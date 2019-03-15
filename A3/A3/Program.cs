@@ -33,21 +33,24 @@ namespace A3
             //new long[] { 3 ,1, 1 } });
 
 
-            Q3ExchangingMoney em = new Q3ExchangingMoney("cc");
-            em.Solve(6, new long[][] {
-            new long[] { 6,5,20 },
-            new long[] { 6,4,-2 },
-            new long[] { 5,1,59},
-            new long[] { 2,5,60 },
-            new long[] { 4,6,22 },
-            new long[] { 2,6,51},
-            new long[] { 3,4,74 },
-             new long[] { 2,1,75},
-            new long[] { 1,5,42},
-            new long[] { 1,3,-21 },
-            new long[] { 5,6,-22},
-             new long[] {2,4,-18},
-            },6);
+            //Q3ExchangingMoney em = new Q3ExchangingMoney("cc");
+            //em.Solve(6, new long[][] {
+            //new long[] { 6,5,20 },
+            //new long[] { 6,4,-2 },
+            //new long[] { 5,1,59},
+            //new long[] { 2,5,60 },
+            //new long[] { 4,6,22 },
+            //new long[] { 2,6,51},
+            //new long[] { 3,4,74 },
+            // new long[] { 2,1,75},
+            //new long[] { 1,5,42},
+            //new long[] { 1,3,-21 },
+            //new long[] { 5,6,-22},
+            // new long[] {2,4,-18},
+            //},6);
+
+            Q4FriendSuggestion ae = new Q4FriendSuggestion("]]");
+            ae.Solve(2, 1, new long[][] { new long[] { 1, 2, 1 } },4,new long[][] { new long[] { 1, 1 }, new long[] { 2, 2 }, new long[] { 1, 2 }, new long[] { 2, 1 } });
 
         }
 
