@@ -10,8 +10,11 @@ namespace A5
     {
         static void Main(string[] args)
         {
-            Q1ConstructTrie nn = new Q1ConstructTrie("dd");
-            nn.Solve(1, new string[] { "ATA" });
+            //Q1ConstructTrie nn = new Q1ConstructTrie("dd");
+            //nn.Solve(1, new string[] { "ATA" });
+
+            Q2MultiplePatternMatching bbb = new Q2MultiplePatternMatching("ss");
+            bbb.Solve("AA", 1, new string[] { "ATA" });
         }
     }
 }
