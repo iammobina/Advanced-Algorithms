@@ -13,8 +13,12 @@ namespace A5
             //Q1ConstructTrie nn = new Q1ConstructTrie("dd");
             //nn.Solve(1, new string[] { "ATA" });
 
-            Q2MultiplePatternMatching bbb = new Q2MultiplePatternMatching("ss");
-            bbb.Solve("AA", 1, new string[] { "ATA" });
+            //Q2MultiplePatternMatching bbb = new Q2MultiplePatternMatching("ss");
+            //bbb.Solve("AA", 1, new string[] { "ATA" });
+
+            Q4SuffixTree ll = new Q4SuffixTree("mmmm");
+            ll.Solve("A$");
+
         }
     }
 }
