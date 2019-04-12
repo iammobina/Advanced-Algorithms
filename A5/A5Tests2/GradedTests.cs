@@ -17,11 +17,11 @@ namespace A5.Tests
         public void SolveTest()
         {
             Processor[] problems = new Processor[] {
-                //new Q1ConstructTrie("TD1"),
-                //new Q2MultiplePatternMatching("TD2"),
-               //// new Q3GeneralizedMPM("TD3"),
-               // //new Q4SuffixTree("TD4"),
-                new Q5ShortestNonSharedSubstring("TD5")
+               new Q1ConstructTrie("TD1"),
+               new Q2MultiplePatternMatching("TD2"),
+               new Q3GeneralizedMPM("TD3"),
+               new Q4SuffixTree("TD4"),
+               new Q5ShortestNonSharedSubstring("TD5")
             };
 
             foreach (var p in problems)
