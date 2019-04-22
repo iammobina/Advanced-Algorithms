@@ -9,12 +9,23 @@ namespace Exam1
 {
     public class Q1Betweenness : Processor
     {
-        //class Node
-        //{
-        //    public Node
+            public class Node
+            {
+                public long Data;
+                public Node left, right, root;
+                public long min = long.MinValue;
+                public long max = long.MaxValue;
 
-        //}
-        public Q1Betweenness(string testDataName) : base(testDataName)
+
+                public Node(long data)
+                {
+                    Data = data;
+                    root = left = right = null;
+                }
+
+            }
+
+            public Q1Betweenness(string testDataName) : base(testDataName)
         {
             //this.ExcludeTestCaseRangeInclusive(2, 50);
         }
@@ -31,7 +42,7 @@ namespace Exam1
             {
                 distances[i] =long.MaxValue;
             }
-//            long start = 0;
+//          long start = 0;
             long StartNode = edges[0][0];
             long EndNode = edges[NodeCount-1][0];
             distances[StartNode] = 0;
@@ -74,16 +85,37 @@ namespace Exam1
 
             return Answer;
         }
-        //public long[] BFSSearch(long NodeCount, long[][] edges)
+        //public Node[] CreateGraph(long nodecount,long[][] edges)
         //{
-        //    for(int i=0;i<edges.Count();i++)
-        //    {
-        //        for(int j=0;j<edges.Count();j++)
-        //        {
 
+        //}
+        //public long[] DFSSearch(long NodeCount, long[][] edges)
+        //{
+        //    for (int i = 0; i < edges.Count(); i++)
+        //    {
+        //        for (int j = 0; j < edges.Count(); j++)
+        //        {
+        //            if(i !=j)
         //        }
         //    }
         //}
+        public long[] PreOrder(Node[] binaryTree)
+        {
+            Stack<Node> s = new Stack<Node>();
+            List<long> Answer = new List<long>();
+            Node root = binaryTree[0];
+            s.Push(root);
+            while (s.Count > 0)
+            {
+                Node current = s.Pop();
+                Answer.Add(current.Data);
+                if (current.right != null)
+                    s.Push(current.right);
+                if (current.left != null)
+                    s.Push(current.left);
+            }
+            return Answer.ToArray();
+        }
         //Create a directed Graph
         public List<long>[] LoadGraph(long nodeCount,long[][] edges)
         {
