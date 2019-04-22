@@ -16,12 +16,23 @@ namespace A6
         public override string Process(string inStr) => 
         TestTools.Process(inStr, (Func<String, long, String[], long[]>)Solve);
 
-        public long[] Solve(string text, long n, String[] patterns)
+        public long[] Solve(string text, long n, string[] patterns)
         {
-            // write your code here
-            throw new NotImplementedException();
+            Dictionary<char, int?> starts = new Dictionary<char, int?>();
+            Dictionary<char, int[]> occ_counts_before = new Dictionary<char, int[]>();
+            PreprocessBWT(text, starts, occ_counts_before);
+            int patternCount = text.Length;
+            string[] patternss = new string[patternCount];
+            long[] result = new long[patternCount];
+            for (int i = 0; i < patternCount; ++i)
+            {
+                patternss[i] = text;
+                result[i] = CountOccurrences(patternss[i], text, starts, occ_counts_before);
+
+            }
+            return result;
         }
-        private void PreprocessBWT(string bwt, IDictionary<char, int> starts, IDictionary<char, int[]> occ_counts_before)
+            private void PreprocessBWT(string bwt, Dictionary<char, int?> starts, Dictionary<char, int[]> occ_counts_before)
         {
             char[] sortBwt = bwt.ToCharArray();
             Array.Sort(sortBwt);
@@ -52,7 +63,7 @@ namespace A6
         // Compute the number of occurrences of string pattern in the text
         // given only Burrows-Wheeler Transform bwt of the text and additional
         // information we get from the preprocessing stage - starts and occ_counts_before.
-        internal virtual int CountOccurrences(string pattern, string bwt, IDictionary<char, int> starts, IDictionary<char, int[]> occ_counts_before)
+        internal virtual int CountOccurrences(string pattern, string bwt, Dictionary<char, int?> starts, Dictionary<char, int[]> occ_counts_before)
         {
             int top = 0;
             int bottom = bwt.Length - 1;
@@ -70,7 +81,7 @@ namespace A6
 
                     int topOccurency = occ_counts_before[letter][top];
                     int bottomOccurency = occ_counts_before[letter][bottom + 1];
-                    int start = starts[letter];
+                    int start = (int)starts[letter];
                     if (bottomOccurency > topOccurency)
                     {
                         top = start + topOccurency;

@@ -40,7 +40,7 @@ namespace A6
             //}
             StringBuilder result = new StringBuilder();
             List<string> matrix = new List<string>();
-            string Answer = "";
+            //string Answer = "";
             List<int> indexes = new List<int>();
             for (int i = 0; i < bwt.Length; i++)
             {
@@ -54,8 +54,8 @@ namespace A6
             {
                 int index = indexes.IndexOf(current);
                 string next = bwt[index].ToString();
-                //result.Append(next);
-                Answer+=String.Join("", next);
+                result.Append(next);
+               // Answer+=String.Join("", next);
                 current = index;
             }
             //for (int i = result.Length - 1; i >= 0; i--)
@@ -71,10 +71,14 @@ namespace A6
             //string answer = new string(charArray);
             //  charArray += '$';
 
-            Answer.Reverse();
-            // return result.ToString().Reverse() + "$";
-            return Answer + "$";
-           // return answer + "$";
+            //var m=Answer.Reverse();
+            //m += "$";
+            //// return result.ToString().Reverse() + "$";
+            //return m.ToString();
+            char[] arr = result.ToString().ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr) + "$";
+            // return answer + "$";
         }
 //        public static void (this StringBuilder sb)
 //{
