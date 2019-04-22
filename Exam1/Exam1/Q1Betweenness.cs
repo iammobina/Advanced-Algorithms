@@ -38,6 +38,7 @@ namespace Exam1
         {
             long[] distances = new long[NodeCount + 1];
             List<long>[] Graph = LoadGraph(NodeCount, edges);
+            Node[] u = CreateGraph(NodeCount, edges);
             for(int i=0;i<distances.Length;i++)
             {
                 distances[i] =long.MaxValue;
@@ -85,10 +86,20 @@ namespace Exam1
 
             return Answer;
         }
-        //public Node[] CreateGraph(long nodecount,long[][] edges)
-        //{
-
-        //}
+        public Node[] CreateGraph(long nodecount, long[][] edges)
+        {
+            Node[] Tree = new Node[edges.Length];
+            for (int i = 0; i < edges.Length; i++)
+                Tree[i] = new Node(edges[i][0]);
+            for (int i = 0; i < edges.Length; i++)
+            {
+                if (edges[i][1] != -1)
+                    Tree[i].left = Tree[nodes[i][1]];
+                if (edges[i][2] != -1)
+                    Tree[i].right = Tree[nodes[i][2]];
+            }
+            return Tree;
+        }
         //public long[] DFSSearch(long NodeCount, long[][] edges)
         //{
         //    for (int i = 0; i < edges.Count(); i++)

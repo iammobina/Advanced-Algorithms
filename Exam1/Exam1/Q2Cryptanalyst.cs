@@ -26,10 +26,11 @@ namespace Exam1
             //return c.Decipher(
             //    cipher, 3, ' ', 'z', 
             //    Cryptanalysis.IsDecipheredI1).GetHashCode().ToString();
+            Dictionary<string, char> dic = new Dictionary<string, char>();
             StringBuilder sb = new StringBuilder();
             foreach(var letter in cipher)
             {
-                
+
             }
             return "return ";
         }

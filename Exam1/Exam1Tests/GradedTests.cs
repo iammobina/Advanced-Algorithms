@@ -20,7 +20,6 @@ namespace Exam1.Tests
             TestTools.RunLocalTest("Exam1",
                 p.Process,
                 p.TestDataName
-               
                 );
         }
 
