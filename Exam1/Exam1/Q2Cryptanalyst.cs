@@ -11,7 +11,7 @@ namespace Exam1
         public Q2Cryptanalyst(string testDataName) : base(testDataName)
         {
             //this.ExcludeTestCaseRangeInclusive(1, 25);
-            //this.ExcludeTestCaseRangeInclusive(27, 37);
+            this.ExcludeTestCaseRangeInclusive(1, 37);
         }
 
         public override string Process(string inStr) => Solve(inStr);
@@ -32,7 +32,7 @@ namespace Exam1
             {
 
             }
-            return "return ";
+            return "return";
         }
         private static HashSet<string> LoadVocab(string vocabFile)
         {

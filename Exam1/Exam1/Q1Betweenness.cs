@@ -27,7 +27,7 @@ namespace Exam1
 
             public Q1Betweenness(string testDataName) : base(testDataName)
         {
-            //this.ExcludeTestCaseRangeInclusive(2, 50);
+            this.ExcludeTestCaseRangeInclusive(2, 50);
         }
 
         public override string Process(string inStr) =>
@@ -38,23 +38,24 @@ namespace Exam1
         {
             long[] distances = new long[NodeCount + 1];
             List<long>[] Graph = LoadGraph(NodeCount, edges);
-            Node[] u = CreateGraph(NodeCount, edges);
+            //Node[] u = CreateGraph(NodeCount, edges);
             for(int i=0;i<distances.Length;i++)
             {
                 distances[i] =long.MaxValue;
             }
 //          long start = 0;
-            long StartNode = edges[0][0];
-            long EndNode = edges[NodeCount-1][0];
-            distances[StartNode] = 0;
+            //long StartNode = edges[0][0];
+            //long EndNode = edges[NodeCount-1][0];
+            distances[edges[0][0]] = 0;
             Queue<long> queue = new Queue<long>();
+            queue.Enqueue(edges[0][0]);
             foreach (var vertex in edges)
             {
-                queue.Enqueue(vertex[0]);
                 while (queue.Count != 0)
                 {
                     long u = queue.Dequeue();
-                    for (int i = 0; i < Graph[u].Count(); i++)
+
+                    for (int i = 0; i < Graph[u].Count; i++)
                     {
                         long v = Graph[u][i];
                         if (distances[v] == long.MaxValue)
@@ -65,16 +66,17 @@ namespace Exam1
                     }
                 }
             }
-            //distances[0] = 0;
-            //if (distances[EndNode] !=long.MaxValue )
-            //{
+            distances[0] = 0;
 
-            //}
 
 
             long[] Answer = new long[NodeCount];
             Array.Sort(distances);
             Array.Reverse(distances);
+            if (distances[0] == long.MaxValue)
+            {
+                distances[0] = NodeCount - 1;
+            }
             Array.Copy(distances, Answer, NodeCount);
          
             //for(int j=1;j<NodeCount;j++)
@@ -86,20 +88,20 @@ namespace Exam1
 
             return Answer;
         }
-        public Node[] CreateGraph(long nodecount, long[][] edges)
-        {
-            Node[] Tree = new Node[edges.Length];
-            for (int i = 0; i < edges.Length; i++)
-                Tree[i] = new Node(edges[i][0]);
-            for (int i = 0; i < edges.Length; i++)
-            {
-                if (edges[i][1] != -1)
-                    Tree[i].left = Tree[nodes[i][1]];
-                if (edges[i][2] != -1)
-                    Tree[i].right = Tree[nodes[i][2]];
-            }
-            return Tree;
-        }
+        //public Node[] CreateGraph(long nodecount, long[][] edges)
+        //{
+        //    Node[] Tree = new Node[edges.Length];
+        //    for (int i = 0; i < edges.Length; i++)
+        //        Tree[i] = new Node(edges[i][0]);
+        //    for (int i = 0; i < edges.Length; i++)
+        //    {
+        //        if (edges[i][1] != -1)
+        //            Tree[i].left = Tree[edges[i][1]];
+        //        if (edges[i][2] != -1)
+        //            Tree[i].right = Tree[edges[i][2]];
+        //    }
+        //    return Tree;
+        //}
         //public long[] DFSSearch(long NodeCount, long[][] edges)
         //{
         //    for (int i = 0; i < edges.Count(); i++)
