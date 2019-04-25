@@ -23,8 +23,13 @@ namespace TestCommon
         {
             return solve(inStr.Trim(IgnoreChars));
         }
+<<<<<<< HEAD
        
  	    public static string Process(string inStr, Func<string, string, string> solve)
+=======
+
+        public static string Process(string inStr, Func<string, string, string> solve)
+>>>>>>> master
         {
             var tokens = inStr.Split(NewLineChars, StringSplitOptions.RemoveEmptyEntries);
             var str1 = tokens[0];
@@ -37,7 +42,11 @@ namespace TestCommon
             return string.Join("\n", solve(inStr.Trim(IgnoreChars)));
         }
 
+<<<<<<< HEAD
         public static string Process(string inStr, 
+=======
+        public static string Process(string inStr,
+>>>>>>> master
             Func<string, long, string[], long[]> solve,
             string outDelim = Space)
         {
@@ -54,8 +63,13 @@ namespace TestCommon
             Func<string, string> Processor,
             string TestDataName,
             Action<string, string> Verifier,
+<<<<<<< HEAD
             bool VerifyResultWithoutOrder=false,
             HashSet<int> excludedTestCases=null) =>
+=======
+            bool VerifyResultWithoutOrder = false,
+            HashSet<int> excludedTestCases = null) =>
+>>>>>>> master
                             RunLocalTest(
                                     AssignmentName,
                                     Processor,
@@ -310,7 +324,11 @@ namespace TestCommon
 
 
         public static string Process(
+<<<<<<< HEAD
             string inStr, 
+=======
+            string inStr,
+>>>>>>> master
             Func<string, string, long[]> processor,
             string outDelim = Space)
         {

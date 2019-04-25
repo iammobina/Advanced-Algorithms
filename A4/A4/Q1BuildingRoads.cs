@@ -106,7 +106,7 @@ namespace A4
             //    }
             //}
 
-            return result;
+           // return result;
         }
 
         private long[] Gety(long count, long[][] points)
