@@ -24,7 +24,9 @@ namespace TestCommon
             return solve(inStr.Trim(IgnoreChars));
         }
 
+
         public static string Process(string inStr, Func<string, string, string> solve)
+
         {
             var tokens = inStr.Split(NewLineChars, StringSplitOptions.RemoveEmptyEntries);
             var str1 = tokens[0];
@@ -37,7 +39,9 @@ namespace TestCommon
             return string.Join("\n", solve(inStr.Trim(IgnoreChars)));
         }
 
+
         public static string Process(string inStr,
+
             Func<string, long, string[], long[]> solve,
             string outDelim = Space)
         {

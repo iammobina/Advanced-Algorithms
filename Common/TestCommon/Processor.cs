@@ -14,11 +14,14 @@ namespace TestCommon
         public virtual Action<string, string> Verifier { get; set; } = null;
 
         public HashSet<int> ExcludedTestCases { get; protected set; } =
+
             new HashSet<int>();
 
         protected void ExcludeTestCases(params int[] testCases)
         {
+
             foreach (var t in testCases)
+
                 ExcludedTestCases.Add(t);
         }
 
