@@ -10,8 +10,7 @@ namespace Exam1
     {
         public Q2Cryptanalyst(string testDataName) : base(testDataName)
         {
-            //this.ExcludeTestCaseRangeInclusive(1, 25);
-            this.ExcludeTestCaseRangeInclusive(1, 37);
+            ExcludeTestCaseRangeInclusive(1, 50);
         }
 
         public override string Process(string inStr) => Solve(inStr);
@@ -26,13 +25,14 @@ namespace Exam1
             //return c.Decipher(
             //    cipher, 3, ' ', 'z', 
             //    Cryptanalysis.IsDecipheredI1).GetHashCode().ToString();
-            Dictionary<string, char> dic = new Dictionary<string, char>();
-            StringBuilder sb = new StringBuilder();
-            foreach(var letter in cipher)
-            {
+            //Dictionary<string, char> dic = new Dictionary<string, char>();
+            //StringBuilder sb = new StringBuilder();
+            //foreach(var letter in cipher)
+            //{
 
-            }
-            return "return";
+            //}
+            
+            return  "return";
         }
         private static HashSet<string> LoadVocab(string vocabFile)
         {
