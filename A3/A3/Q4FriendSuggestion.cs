@@ -161,8 +161,8 @@ namespace A3
             Distance[0] = 0;
             ReverseDistance[0] = 0;
             //  PriorityQueue<Node> q = new PriorityQueue<>();
-
-
+		
+		return new long[] {};
         }
 
 

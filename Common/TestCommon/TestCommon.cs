@@ -11,6 +11,7 @@ namespace TestCommon
     {
         public static readonly char[] IgnoreChars = new char[] { '\n', '\r', ' ' };
         public static readonly char[] NewLineChars = new char[] { '\n', '\r' };
+<<<<<<< HEAD
 		
 		public static string Process(string inStr, Func<string, long[]> solve)
         {
@@ -45,14 +46,20 @@ namespace TestCommon
 
             return string.Join(" ", solve(str1, cnt, strList));
         }
+=======
+>>>>>>> master
 
         public static void RunLocalTest(
             string AssignmentName,
             Func<string, string> Processor,
             string TestDataName,
+<<<<<<< HEAD
             Action<string, string> Verifier,
             bool VerifyResultWithoutOrder=false,
             HashSet<int> excludedTestCases=null) =>
+=======
+            Action<string, string> Verifier) =>
+>>>>>>> master
                             RunLocalTest(
                                     AssignmentName,
                                     Processor,
@@ -72,8 +79,12 @@ namespace TestCommon
             bool saveMode = false,
             string testDataPathOverride = null,
             int maxTestCases = int.MaxValue,
+<<<<<<< HEAD
             Action<string, string> Verifier = null,
             HashSet<int> excludedTestCases = null)
+=======
+            Action<string, string> Verifier = null)
+>>>>>>> master
         {
             Verifier = Verifier ?? FileVerifier;
             string testDataPath = $"{AssignmentName}_TestData";
