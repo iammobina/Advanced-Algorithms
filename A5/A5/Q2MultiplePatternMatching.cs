@@ -18,7 +18,7 @@ namespace A5
         TestTools.Process(inStr, (Func<String, long, String[], long[]>)Solve);
 
         public long[] Solve(string text, long n, string[] patterns)
-        {
+        {        
             // write your code here
             List<long> result = new List<long>();
             List<Node> trie = patternsToTrie(patterns);
