@@ -39,9 +39,9 @@ namespace A6
 
             for (int i = 0; i < sortBwt.Length; i++)
             {
-                if (starts[sortBwt[i]] == null)
+                if (starts.Keys[sortBwt[i]] == null)
                 {
-                    starts[sortBwt[i]] = i;
+                    starts.Add[sortBwt[i]] = i;
                 }
             }
             foreach (char character in starts.Keys)
@@ -51,19 +51,15 @@ namespace A6
             for (int i = 1; i < bwt.Length + 1; i++)
             {
                 char current = bwt[i - 1];
-            //    foreach(KeyValuePair<char, int[]> characterEntry in occ_counts_before.Keys)
-            //    {
-            //        characterEntry.Value[i] = characterEntry.Value[i - 1] + (characterEntry.Key == current ? 1 : 0);
+                foreach (KeyValuePair<char, int[]> characterEntry in occ_counts_before)
+                {
+                    characterEntry.Value[i] = characterEntry.Value[i - 1] + (characterEntry.Key == current ? 1 : 0);
 
-            //    }
+                }
             }
 
         }
-
-        // Compute the number of occurrences of string pattern in the text
-        // given only Burrows-Wheeler Transform bwt of the text and additional
-        // information we get from the preprocessing stage - starts and occ_counts_before.
-        internal virtual int CountOccurrences(string pattern, string bwt, Dictionary<char, int?> starts, Dictionary<char, int[]> occ_counts_before)
+        public int CountOccurrences(string pattern, string bwt, Dictionary<char, int?> starts, Dictionary<char, int[]> occ_counts_before)
         {
             int top = 0;
             int bottom = bwt.Length - 1;

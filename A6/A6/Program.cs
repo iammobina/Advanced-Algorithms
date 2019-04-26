@@ -14,8 +14,8 @@ namespace A6
             //Q1ConstructBWT nb = new Q1ConstructBWT("ss");
             //nb.Solve("panamabananas$");
 
-            Q2ReconstructStringFromBWT ff= new Q2ReconstructStringFromBWT("fdd");
-            ff.Solve("AGGGAA$");
+            Q3MatchingAgainCompressedString ff = new Q3MatchingAgainCompressedString("fdd");
+            ff.Solve("AGGGAA$", 1, new string[] { "GA" });
 
         }
     }
