@@ -16,6 +16,7 @@ namespace A2.Tests
         [DeploymentItem("TestData", "A2_TestData")]
         public void SolveTest()
         {
+		 
             Processor[] problems = new Processor[] {
                new Q1ShortestPath("TD1"),
                new Q2BipartiteGraph("TD2")

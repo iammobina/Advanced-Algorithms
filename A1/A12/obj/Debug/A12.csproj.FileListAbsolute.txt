@@ -9,3 +9,14 @@ C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.csproj.CoreCompileInputs.cache
 C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.csproj.CopyComplete
 C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.exe
 C:\git\96522321\DS97981\A12\A12\obj\Debug\A12.pdb
+E:\git\96522321\AD97982\A1\A12\bin\Debug\A12.exe.config
+E:\git\96522321\AD97982\A1\A12\bin\Debug\A12.exe
+E:\git\96522321\AD97982\A1\A12\bin\Debug\A12.pdb
+E:\git\96522321\AD97982\A1\A12\bin\Debug\TestCommon.dll
+E:\git\96522321\AD97982\A1\A12\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\git\96522321\AD97982\A1\A12\bin\Debug\TestCommon.pdb
+E:\git\96522321\AD97982\A1\A12\obj\Debug\A12.csprojAssemblyReference.cache
+E:\git\96522321\AD97982\A1\A12\obj\Debug\A12.csproj.CoreCompileInputs.cache
+E:\git\96522321\AD97982\A1\A12\obj\Debug\A12.csproj.CopyComplete
+E:\git\96522321\AD97982\A1\A12\obj\Debug\A12.exe
+E:\git\96522321\AD97982\A1\A12\obj\Debug\A12.pdb
