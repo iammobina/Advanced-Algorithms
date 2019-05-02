@@ -39,9 +39,9 @@ namespace A6
 
             for (int i = 0; i < sortBwt.Length; i++)
             {
-                if (starts.Keys[sortBwt[i]] == null)
+                if (starts[sortBwt[i]] != null)
                 {
-                    starts.Add[sortBwt[i]] = i;
+                    starts[sortBwt[i]] = i;
                 }
             }
             foreach (char character in starts.Keys)
