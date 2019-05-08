@@ -13,6 +13,7 @@ namespace A6
     {
         public Q2ReconstructStringFromBWT(string testDataName) : base(testDataName)
         {
+           
         }
 
         public override string Process(string inStr) =>
@@ -38,24 +39,27 @@ namespace A6
             //    result.append(next);
             //    current = index;
             //}
+
             StringBuilder result = new StringBuilder();
             List<string> matrix = new List<string>();
             //string Answer = "";
             List<int> indexes = new List<int>();
             for (int i = 0; i < bwt.Length; i++)
             {
-                matrix.Add("" + bwt[i]);
+                matrix.Add(bwt[i].ToString());
                 indexes.Add(i);
             }
-            indexes.Sort((o1, o2) => matrix[o1].CompareTo(matrix[o2]));
+             indexes.Sort((o1, o2) => matrix[o1].CompareTo(matrix[o2]));
+           // Sorting(indexes);
             int current = indexes[0];
+
             for (int i = 0; i < bwt.Length - 1; i++)
-           // for (int i = bwt.Length - 1; i > 0; i--)
+            // for (int i = bwt.Length - 1; i > 0; i--)
             {
                 int index = indexes.IndexOf(current);
                 string next = bwt[index].ToString();
                 result.Append(next);
-               // Answer+=String.Join("", next);
+                // Answer+=String.Join("", next);
                 current = index;
             }
             //for (int i = result.Length - 1; i >= 0; i--)
@@ -76,24 +80,33 @@ namespace A6
             //// return result.ToString().Reverse() + "$";
             //return m.ToString();
             char[] arr = result.ToString().ToCharArray();
+            ////arr[bwt.Length - 1] = '$';
+            ////arr[bwt.Length - 2] = bwt[0];
             Array.Reverse(arr);
             return new string(arr) + "$";
             // return answer + "$";
-        }
-//        public static void (this StringBuilder sb)
-//{
-//            char t;
-//            int end = sb.Length - 1;
-//            int start = 0;
 
-//            while (end - start > 0)
-//            {
-//                t = sb[end];
-//                sb[end] = sb[start];
-//                sb[start] = t;
-//                start++;
-//                end--;
-//            }
-//        }
         }
+        private void Sorting(List<int> indexes)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        //        public static void (this StringBuilder sb)
+        //{
+        //            char t;
+        //            int end = sb.Length - 1;
+        //            int start = 0;
+
+        //            while (end - start > 0)
+        //            {
+        //                t = sb[end];
+        //                sb[end] = sb[start];
+        //                sb[start] = t;
+        //                start++;
+        //                end--;
+        //            }
+        //        }
+    }
 }

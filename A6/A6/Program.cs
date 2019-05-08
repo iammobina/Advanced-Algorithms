@@ -14,8 +14,15 @@ namespace A6
             //Q1ConstructBWT nb = new Q1ConstructBWT("ss");
             //nb.Solve("panamabananas$");
 
+            Q2ReconstructStringFromBWT ffs = new Q2ReconstructStringFromBWT("dd");
+            ffs.Solve("CC$");
+
             Q3MatchingAgainCompressedString ff = new Q3MatchingAgainCompressedString("fdd");
-            ff.Solve("AGGGAA$", 1, new string[] { "GA" });
+            ff.Solve("CG$TTGTC", 2, new string[] { "TTG","GTG" });
+            
+
+            //Q4ConstructSuffixArray hh = new Q4ConstructSuffixArray("dd");
+            //hh.Solve("GAC$");
 
         }
     }
