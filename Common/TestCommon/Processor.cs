@@ -18,7 +18,6 @@ namespace TestCommon
 
         protected void ExcludeTestCases(params int[] testCases)
         {
-
             foreach(var t in testCases)
                 ExcludedTestCases.Add(t);
         }
