@@ -15,7 +15,7 @@ namespace A6
             //nb.Solve("panamabananas$");
 
             Q2ReconstructStringFromBWT ffs = new Q2ReconstructStringFromBWT("dd");
-            ffs.Solve("CC$");
+            ffs.Solve("CG$TTGTC");
 
             Q3MatchingAgainCompressedString ff = new Q3MatchingAgainCompressedString("fdd");
             ff.Solve("CG$TTGTC", 2, new string[] { "TTG","GTG" });
