@@ -34,7 +34,7 @@ namespace Exam2
         public List<string> SATHelper()
         {
             List<string> answer = new List<string>();
-            StringBuilder clauses = new StringBuilder();//((4 * CountV + 3 * edges.Length) + " " + 3 * CountV + "\n");
+            StringBuilder clauses = new StringBuilder((4 * CountV + 3 * edges.Length) + " " + 3 * CountV + "\n");
             UniqueNumber(clauses);
             Number(clauses);
             answer.Add(clauses.ToString());
