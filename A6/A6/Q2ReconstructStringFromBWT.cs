@@ -39,7 +39,7 @@ namespace A6
             //    result.append(next);
             //    current = index;
             //}
-
+            Array.Sort(bwt.ToCharArray());
             StringBuilder result = new StringBuilder();
             List<string> matrix = new List<string>();
             //string Answer = "";
