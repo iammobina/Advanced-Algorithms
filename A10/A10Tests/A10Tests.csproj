@@ -68,13 +68,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
+      <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
+      <Name>TestCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\A10\A10.csproj">
       <Project>{90641525-B31D-4942-A259-C7593E8BD6BA}</Project>
       <Name>A10</Name>
-    </ProjectReference>
-    <ProjectReference Include="E:\HomeWork\AD_A10\TestCommon\TestCommon\TestCommon.csproj">
-      <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
-      <Name>TestCommon</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
