@@ -138,13 +138,13 @@
     <None Include="TestData\TD4\In_9.webgraphviz" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestCommon\TestCommon.csproj">
+      <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
+      <Name>TestCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\A11\A11.csproj">
       <Project>{A86035CB-4638-42AF-8154-F2F11EDFED4E}</Project>
       <Name>A11</Name>
-    </ProjectReference>
-    <ProjectReference Include="E:\git\96522321\AD97982\Common\TestCommon\TestCommon.csproj">
-      <Project>{c39ff0c4-6960-42ad-8e2c-d2cafe850a52}</Project>
-      <Name>TestCommon</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
