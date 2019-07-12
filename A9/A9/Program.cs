@@ -10,7 +10,7 @@ namespace A9
     class Program
     {
         static void Main(string[] args)
-        {
+        {  
          //   Q1InferEnergyValues q1 = new Q1InferEnergyValues("xxx");
          //   q1.Solve(2, new double[,]
          //{{1 ,5 ,7},
