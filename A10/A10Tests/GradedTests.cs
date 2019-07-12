@@ -15,7 +15,7 @@ namespace A3.Tests
     {
         [TestMethod(), Timeout(1000)]
         public void SolveTest_Q1FrequencyAssignment()
-        {
+        { 
            // Assert.Inconclusive("A10.Q1 Not Solved");
             RunTest(new Q1FrequencyAssignment("TD1"));
         }
